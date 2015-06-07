@@ -1,0 +1,26 @@
+{
+  "allData":
+  {"allUsers":[
+    {"id":1,"firstname": "Doni","lastname":"Murati","registered":"true"},
+    {"id":2,"firstname": "Malle","lastname":"p","registered":"false"},
+    {"id":3,"firstname": "yes","lastname":"hej","registered":"false"},
+    {"id":4,"firstname": "Sev","lastname":"Hy","registered":"true"},
+    {"id":5,"firstname": "Peter","lastname":"Lar","registered":"false"},
+    {"id":6,"firstname": "Peter","lastname":"Anderse","registered":"false"},
+    {"id":7,"firstname": "Peter","lastname":"Larsen","registered":"true"},
+    {"id":8,"firstname": "Abe","lastname":"zum","registered":"true"}
+  ],
+    "currentUser":
+    {"id":1,"firstname": "Martin","lastname":"Petersen","Active":"true","NumberOfEvents":2}
+  ,
+    "events":[
+      {"id":1,"location":"borup","date":"22/12/2015","time":"22.00","maxAttendees":8,
+        "attendees":[{"id":1,"firstname":"Martin", "lastname":"Petersen","registered":"false"}, {"id":2,"firstname":"Jesper","lastname":"Hansen","registered":"true"}]},
+      {"id":2, "location":"borup","date":"22/12/2016","time":"21.00","maxAttendees":8,
+        "attendees":[{"id":1,"firstname":"Martin", "lastname":"Petersen","registered":"true"}, {"id":3,"firstname":"Sofie","lastname":"Mortensen","registered":"true"}]},
+      {"id":3,"location":"borup","date":"22/12/2015","time":"12.00","maxAttendees":8,
+        "attendees":[{"id":4,"firstname":"Peter", "lastname":"Fister","registered":"true"}, {"id":1,"firstname":"Martin","lastname":"Petersen","registered":"false"}]}
+
+    ]}
+
+}

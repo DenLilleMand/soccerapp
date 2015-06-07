@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="libs/jqueryMobile/jquery.mobile-1.4.5.css" />
+    <script src="libs/jqueryMobile/jquery-1.11.1.min.js"></script>
+    <script src="libs/jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+<div id="header" data-role="header" style="height:50px;">
+    <a id="_createEventButton" data-icon="plus" class="ui-btn-right" href="#createEvent" style="font-size: 15px;padding-right: 0;" >&nbsp</a>
+    <a id="_goBack" data-icon="carat-l" class="ui-btn-left" style="font-size: 15px;padding-right: 0;" >&nbsp</a>
+    <span class="ui-title" />
+    <p style="margin-top:5px; font-size: 15px;"></p>
+</div>
+<div data-role="page" id ="myProfile" data-title="Profil" class="myProfileClass">
+    <div style="margin-left: 20px;">
+
+
+    </div>
+
+
+</div>
+
+<div  data-role="page" id="allUsers" data-title="Venner">
+    <ul  data-role="listview" >
+
+        <li  style="margin-top: 10px;"id="A" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">A</li>
+        <li  style="margin-top: 10px;" id="B" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">B</li>
+        <li  style="margin-top: 10px;" id="C" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">C</li>
+        <li  style="margin-top: 10px;" id="D" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">D</li>
+        <li  style="margin-top: 10px;" id="E" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">E</li>
+        <li  style="margin-top: 10px;" id="F" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">F</li>
+        <li  style="margin-top: 10px;" id="G" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">G</li>
+        <li  style="margin-top: 10px;" id="H" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">H</li>
+        <li  style="margin-top: 10px;" id="I" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">I</li>
+        <li  style="margin-top: 10px;" id="J" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">J</li>
+        <li  style="margin-top: 10px;" id="K" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">K</li>
+        <li  style="margin-top: 10px;" id="L" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">L</li>
+        <li  style="margin-top: 10px;" id="M" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">M</li>
+        <li  style="margin-top: 10px;" id="N" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">N</li>
+        <li  style="margin-top: 10px;" id="O" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">O</li>
+        <li style="margin-top: 10px;"  id="P" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">P</li>
+        <li  style="margin-top: 10px;" id="Q" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">Q</li>
+        <li  style="margin-top: 10px;" id="R" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">R</li>
+        <li style="margin-top: 10px;"  id="S" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">S</li>
+        <li  style="margin-top: 10px;" id="T" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">T</li>
+        <li  style="margin-top: 10px;" id="U" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">U</li>
+        <li  style="margin-top: 10px;" id="V" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber ">V</li>
+        <li  style="margin-top: 10px;" id="X" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">X</li>
+        <li  style="margin-top: 10px;" id="Y" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">Y</li>
+        <li  style="margin-top: 10px;"id="Z" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">Z</li>
+        <li  style="margin-top: 10px;" id="Æ" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">Æ</li>
+        <li  style="margin-top: 10px;" id="Ø" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">Å</li>
+        <li  style="margin-top: 10px;" id="Å" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b sortNumber">Ø</li>
+    </ul>
+</div>
+<!--Events bliver tilføjet i javascript-->
+<div  data-role="page" id="allEvents" data-title="Kommende events">
+    <div style="border: 2px solid black">
+        <p style="text-align: center;color: black">Inviteret Events</p>
+        <ul id="invitedEventList" data-role="listview" class="ui-listview">
+        </ul>
+    </div>
+
+
+    <div style="border: 2px solid black">
+        <p style="text-align: center;color: black">Kommende Events</p>
+    <ul id="eventList" data-role="listview" class="ui-listview">
+    </ul>
+    </div>
+
+
+</div>
+
+<!--Valgte event-->
+<div data-role="page" id ="expandedEvent" data-title="Event" class="myEvent">
+
+    <ul data-role="listview" class="ui-listview" id="_eventAttendees">
+
+    </ul>
+
+
+</div>
+
+<!--Opret Event-->
+<div data-role="page" id="createEvent" data-title="Tilføj Event">
+
+    <!--Lokation i Strings-->
+    <label style="color:#000000" for="_newLokationEvent">Lokation</label>
+    <input  placeholder="Vælg sted" id="_newLokationEvent" type="text" name="location"  value="" data-mini="true" style="color: black" />
+
+
+    <!--Tidspunkt-->
+    <div id="timeDiv">
+        <label  style="color: black;" for="_newTimeEvent" class="select">Tidspunkt</label>
+        <select placeholder="test"  name="time" id="_newTimeEvent">
+
+        </select>
+    </div>
+
+    <!--Max deltagere-->
+    <div>
+        <label  style="color: black;" for="_maxAtendees" class="select">Max deltagere</label>
+        <select  name="maxAtendees" id="_maxAtendees">
+
+        </select>
+    </div>
+    <!--Dato-->
+    <div><label style="color: black;" for="_newDateEvent">Dato:</label>
+        <input onfocus="(this.type='date')" onblur="(this.type='text')" id="_newDateEvent" type="text" name="date"  placeholder="Vælg dato" value="Vælg dato"></div>
+
+
+    <!--Åben liste for deltagere-->
+
+    <button style="color: #000000" id="_showUsers">Vælg deltagere</button>
+   <div style="display: none" id="_allShowedUsers">
+
+
+       <div class="ui-checkbox">
+            <input value="0" type="checkbox" name="pickAll" id="_pickAll" class="custom">
+            <label for="_pickAll" data-theme="c" class="ui-btn ui-btn-icon-left ui-corner-top ui-btn-up-c">
+            <span class="ui-btn-inner ui-corner-top">
+                <span class="ui-btn-text">Vælg Alle</span>
+                <span class="ui-icon ui-icon-ui-icon-checkbox-off ui-icon-checkbox-off"></span></span></label>
+        </div>
+   </div>
+    <div>
+        <button onclick="creatEvent()" id="saveEvent">Opret Event</button>
+
+    </div>
+
+</div>
+
+
+<!--Footer-->
+<div data-role="footer" data-id="foo1" data-position="fixed" style="border-style: none">
+    <div data-role="navbar" >
+        <ul>
+            <li><a class="ui-btn-active" id="_myProfile" data-icon="home" data-transition="pop" href="#myProfile">Profil</a></li>
+            <li><a   id ="_events" data-icon="heart"  data-transition="pop" href="#allEvents">Events</a></li>
+            <li><a   id="_allUsers" data-icon="user" href="#allUsers" data-transition="pop">Venner</a></li>
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /footer -->
+
+<script src="js/data.js"></script>
+<script src="js/venner.js"></script>
+<script src="js/myProfile.js"></script>
+<script src="js/events.js"></script>
+<script src="js/createEvent.js"></script>
+<script src="js/jqueryCommands.js"></script>
+
+
+<script>
+    getData().done(handleData);
+    addUsers(getAllUsers());
+    loadProfile(getCurrentUser());
+    loadEvents(getAllEvents());
+    maxAttendess();
+    pickTime();
+    getAllUsersForEvent(getAllData().allData.allUsers);
+   // loadInvitedEvents(getAllData().allData.events);
+</script>
+
+</body>
+</html>
