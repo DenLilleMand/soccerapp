@@ -2,39 +2,47 @@
  * Created by sjuften on 06-06-15.
  */
 
-function loadEvents(arr){
-    parseStringDateAndSort(arr);
-    for (var item = 0; item<arr.length;item++) {
-        var test = arr[item];
-        for (var i = 0; i < test.attendees.length; i++) {
-            if (getCurrentUser().id == test.attendees[i].id && test.attendees[i].registered == "true") {
-                $('#eventList').append('<li value="' + arr[item].id + '" onclick="getEvent(this.value)" style="height: 70px;" data-corners="false" data-shadow="false" data-wrapperels="div"  data-theme="c" class="ui-btn ui-li ui-li-has-thumb ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#expandedEvent" style="text-decoration: none"  class="ui-link-inherit"><img height="100%" src="img/download.jpg" class="ui-li-thumb"><h3 class="ui-li-heading">' + arr[item].time + '</h3><p class="ui-li-desc">' + arr[item].date + '</p><p class="ui-li-desc">Tryk for mere information</p></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>')
+function loadEvents(arr){isEmpty
+    if (isEmpty(arr)){
+        parseStringDateAndSort(arr);
+        for (var item = 0; item<arr.length;item++) {
+            var test = arr[item];
+            for (var i = 0; i < test.attendees.length; i++) {
+                if (getCurrentUser().id == test.attendees[i].id && test.attendees[i].registered == "true") {
+                    $('#eventList').append('<li value="' + arr[item].id + '" onclick="getEvent(this.value)" style="height: 70px;" data-corners="false" data-shadow="false" data-wrapperels="div"  data-theme="c" class="ui-btn ui-li ui-li-has-thumb ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#expandedEvent" style="text-decoration: none"  class="ui-link-inherit"><img height="100%" src="img/download.jpg" class="ui-li-thumb"><h3 class="ui-li-heading">' + arr[item].time + '</h3><p class="ui-li-desc">' + arr[item].date + '</p><p class="ui-li-desc">Tryk for mere information</p></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>')
 
+                }
+                if (getCurrentUser().id == test.attendees[i].id && test.attendees[i].registered == "false") {
+                    $('#invitedEventList').append('<li value="' + arr[item].id + '" onclick="getEvent(this.value)" style="height: 70px;" data-corners="false" data-shadow="false" data-wrapperels="div"  data-theme="c" class="ui-btn ui-li ui-li-has-thumb ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#expandedEvent" style="text-decoration: none"  class="ui-link-inherit"><img height="100%" src="img/download.jpg" class="ui-li-thumb"><h3 class="ui-li-heading">' + arr[item].time + '</h3><p class="ui-li-desc">' + arr[item].date + '</p><p class="ui-li-desc">Tryk for mere information</p></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>')
+                }
             }
-            if (getCurrentUser().id == test.attendees[i].id && test.attendees[i].registered == "false") {
-                $('#invitedEventList').append('<li value="' + arr[item].id + '" onclick="getEvent(this.value)" style="height: 70px;" data-corners="false" data-shadow="false" data-wrapperels="div"  data-theme="c" class="ui-btn ui-li ui-li-has-thumb ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#expandedEvent" style="text-decoration: none"  class="ui-link-inherit"><img height="100%" src="img/download.jpg" class="ui-li-thumb"><h3 class="ui-li-heading">' + arr[item].time + '</h3><p class="ui-li-desc">' + arr[item].date + '</p><p class="ui-li-desc">Tryk for mere information</p></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>')
-            }
+
+
         }
-
-
     }
+
+
 };
 
 function loadEvent(arr){
     $('#expandedEvent').children().remove();
-    $('#expandedEvent').append('<label  id="time" style="color: #000000;display: inline;margin-bottom: 20px;">Tidspunkt: </label><br/>');
-    $('#expandedEvent').append(' <label  id="date" style="color: #000000;display: inline;margin-bottom: 20px;">Dato: </label><br/>');
-    $('#expandedEvent').append(' <label  id="location" style="color: #000000;display: inline;margin-bottom: 20px;">Lokation: </label><br/>');
-    $('#expandedEvent').append(' <label id="maxAtend" style="color: #000000;display: inline;margin-bottom: 20px;">Max Deltagere: </label><br/>');
-    $('#expandedEvent').append(' <label id="location" style="color: #000000;display: inline;margin-bottom: 20px;">DeltagerList: </label><br/>');
+    $('#expandedEvent').append('<div style="text-align: center;margin-bottom: 10px;"><h1 style="color: #000000;display: inline">'+arr.name+'</h1></div><br>');
+    $('#expandedEvent').append('<label  id="time" style="color: #000000;display: inline;margin-bottom: 20px;margin-left: 10px;">Tidspunkt: </label><br/>');
+    $('#expandedEvent').append(' <label  id="date" style="color: #000000;display: inline;margin-bottom: 20px;margin-left: 10px;">Dato: </label><br/>');
+    $('#expandedEvent').append(' <label  id="location" style="color: #000000;display: inline;margin-bottom: 20px;margin-left: 10px;">Lokation: </label><br/>');
+
+    $('#expandedEvent').append(' <label id="maxAtend" style="color: #000000;display: inline;margin-bottom: 20px;margin-left: 10px;">Max Deltagere: </label><br/>');
+    $('#expandedEvent').append('<label  id="description" style="color: #000000;display: inline;margin-bottom: 40px;margin-left: 10px;margin-top: 10px;">Comments:</label><br/>');
+    $('#expandedEvent').append(' <label id="location" style="color: #000000;display: inline;margin-bottom: 20px;margin-left: 10px;">DeltagerList: </label><br/>');
 
 
-    $('#expandedEvent').append('<ul data-role="listview" class="ui-listview" id="_eventAttendees"></ul>');
+    $('#expandedEvent').append('<ul style="margin-top: 10px;" data-role="listview" class="ui-listview" id="_eventAttendees"></ul>');
 
-   $('#time').append('<p style="color: #000000;display: inline;">'+arr.time+'</p><br>');
-    $('#date').append('<p style="color: #000000;display: inline">'+arr.date+'</p><br>');
-    $('#location').append('<p style="color: #000000;display: inline">'+arr.location+'</p><br>');
-    $('#maxAtend').append('<p style="color: #000000;display: inline">'+arr.maxAttendees+'</p><br>');
+   $('#time').append('<p style="color: #000000;display: inline;margin-left: 10px;">'+arr.time+'</p><br>');
+    $('#date').append('<p style="color: #000000;display: inline;margin-left: 10px;">'+arr.date+'</p><br>');
+    $('#location').append('<p style="color: #000000;display: inline;margin-left: 10px;">'+arr.location+'</p><br>');
+    $('#maxAtend').append('<p style="color: #000000;display: inline;margin-left: 10px;">'+arr.maxAttendees+'</p><br>');
+    $('#description').append('<div style="min-height: 70px;overflow: auto;border: 2px solid black;padding: 10px;margin-top: 10px;border-radius: 5px;"><p style="color: #000000;display: inline;">'+arr.description+'</p></div><br>');
     for(var item = 0; item<arr.attendees.length;item++){
         if(arr.attendees[item].registered=="true"){
             $('#_eventAttendees').append('<li style="background-color: #000000;margin-bottom: 20px;">'+arr.attendees[item].firstname+ " " +arr.attendees[item].lastname+'</li>')

@@ -10,15 +10,16 @@
     {"id":7,"firstname": "Peter","lastname":"Larsen","registered":"true"},
     {"id":8,"firstname": "Abe","lastname":"zum","registered":"true"}
   ],
+
     "currentUser":
     {"id":1,"firstname": "Martin","lastname":"Petersen","Active":"true","NumberOfEvents":2}
   ,
     "events":[
-      {"id":1,"location":"borup","date":"22/12/2015","time":"22.00","maxAttendees":8,
+      {"id":1,"name":"sommerbold","location":"borup","date":"22/12/2015","time":"22.00","maxAttendees":8,"description":"Kom til tiden",
         "attendees":[{"id":1,"firstname":"Martin", "lastname":"Petersen","registered":"false"}, {"id":2,"firstname":"Jesper","lastname":"Hansen","registered":"true"}]},
-      {"id":2, "location":"borup","date":"22/12/2016","time":"21.00","maxAttendees":8,
+      {"id":2, "name":"vinterbold","location":"borup","date":"22/12/2016","time":"21.00","maxAttendees":8,"description":"Kom til tiden",
         "attendees":[{"id":1,"firstname":"Martin", "lastname":"Petersen","registered":"true"}, {"id":3,"firstname":"Sofie","lastname":"Mortensen","registered":"true"}]},
-      {"id":3,"location":"borup","date":"22/12/2015","time":"12.00","maxAttendees":8,
+      {"id":3,"name":"efterårs bold","location":"borup","date":"22/12/2015","time":"12.00","maxAttendees":8,"description":"Kom til tiden",
         "attendees":[{"id":4,"firstname":"Peter", "lastname":"Fister","registered":"true"}, {"id":1,"firstname":"Martin","lastname":"Petersen","registered":"false"}]}
 
     ]}

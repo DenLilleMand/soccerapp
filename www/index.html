@@ -87,8 +87,14 @@
 
 <!--Opret Event-->
 <div data-role="page" id="createEvent" data-title="Tilføj Event">
+    <!--navn -->
+    <label style="color:#000000" for="_newNameEvent">Event navn: </label>
+    <input  placeholder="Vælg navn" id="_newNameEvent" type="text" name="name"  value="" data-mini="true" style="color: black" />
+
 
     <!--Lokation i Strings-->
+
+
     <label style="color:#000000" for="_newLokationEvent">Lokation</label>
     <input  placeholder="Vælg sted" id="_newLokationEvent" type="text" name="location"  value="" data-mini="true" style="color: black" />
 
@@ -111,6 +117,10 @@
     <!--Dato-->
     <div><label style="color: black;" for="_newDateEvent">Dato:</label>
         <input onfocus="(this.type='date')" onblur="(this.type='text')" id="_newDateEvent" type="text" name="date"  placeholder="Vælg dato" value="Vælg dato"></div>
+
+    <!--comments -->
+    <label style="color:#000000" for="_newDescriptionEvent">Comments: </label>
+    <input  placeholder="Skriv kommentarer" id="_newDescriptionEvent" type="text" name="comments"  value="" data-mini="true" style="color: black; overflow-y: scroll;" />
 
 
     <!--Åben liste for deltagere-->
@@ -162,7 +172,6 @@
     maxAttendess();
     pickTime();
     getAllUsersForEvent(getAllData().allData.allUsers);
-   // loadInvitedEvents(getAllData().allData.events);
 </script>
 
 </body>

@@ -11,15 +11,13 @@ function setAllData(arr){
 
 function getData() {
     return $.ajax({
-        url: "allTestData.json",
+        url: "http://soccerappserver.azurewebsites.net/api/event/getevents",
         type: 'GET'
     });
 }
 function handleData(data /* , textStatus, jqXHR */ ) {
     console.log(data);
     setAllData(data);
-
-
 }
 function getCurrentUser(){
     return JSON.parse(sessionStorage.getItem("currentUser"));
@@ -39,4 +37,13 @@ function getAllUsers(){
 }
 function setAllUsers(){
     sessionStorage.setItem('allUsers',JSON.stringify(getAllData().allData.allUsers))
+}
+function isEmpty(arr){
+    if(arr===null){
+        console.log("false");
+        return false;
+    }
+    else{
+        return true;
+    }
 }
